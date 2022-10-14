@@ -8,7 +8,7 @@ def main():
 
     st.subheader("Dada la siguiente figura obtenga los momentos invariantes de Hu (H1-H7) y la Tabla Resumen. ""\n"
      "Programe un script en Python que obtenga los Hu(i=1..7) de cada una de las vocales. Puede utilizar CV2.")
-    imagen= Image.open('test/vocales.png')
+    imagen= Image.open('vocales.png')
     st.image(imagen, caption='Imagen de primera problematica')
     st.write("##")
     TablaOrigen=[{'Momentos de Hu de la letra A': '', 'Momentos de Hu de la letra E': '', 'Momentos de Hu de la letra I': '','Momentos de Hu de la letra O':'','Momentos de Hu de la letra U':''},

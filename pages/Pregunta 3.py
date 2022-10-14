@@ -5,7 +5,7 @@ from PIL import Image
 st.title('Pregunta 3')
 st.write("Aplique Least Square Polymonial mediante poly1d() y polyfit(). Utilice f1.npy y f2.npy para obtener el siguiente gráfico. Utilice x = np.arange(start=1,stop=50,step=1).")
 
-imagen= Image.open('test/Pregu3.png')
+imagen= Image.open('Pregu3.png')
 st.image(imagen, caption='Imagen Tercera problematica')
 st.write("##")
 
@@ -40,6 +40,6 @@ cambio=['Ocultar Resultados', 'Mostrar Resultados']
 MostrarReusltado = st.radio ('Resultado',cambio)
 if MostrarReusltado == 'Mostrar Resultados':
     
-    imagenRes= Image.open('test/Preg3.png')
+    imagenRes= Image.open('Preg3.png')
     st.image(imagenRes, caption='Resultado')
     st.write("##")

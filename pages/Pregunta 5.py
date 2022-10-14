@@ -5,7 +5,7 @@ from PIL import Image
 st.title('Pregunta 5')
 st.write("Separe la tendencia de la señal. Obtenga un gráfico similar. Complete el código. ")
 
-imagen= Image.open('test/Pregu5.png')
+imagen= Image.open('Pregu5.png')
 st.image(imagen, caption='Imagenes Quinta problematica')
 st.write("##")
 
@@ -17,13 +17,17 @@ if page == 'Mostrar Codigo':
 import numpy as np
 from matplotlib import pyplot as pt
 from scipy import signal
-
-tendencia = np.linspace(0,10,100)
-x=tendencia +np.random.normal(size=100)
+#Se genera un arreglo con la tendencia 
+t = np.linspace(0,5,100)
+#Se genera un arreglo de numeros aleatorios, de largo 100
+x=t +np.random.normal(size=100)
+#Se remueve la tendencia lienal del arreglo anterior 
 y=signal.detrend(x,type='linear')
+
+#Se genera el grafico con la señal con y sin tendencia.
 pt.figure()
-pt.plot(tendencia,x,'tab:blue',label='Sin tendencia')
-pt.plot(tendencia,y,'tab:red',label='Tendencia')
+pt.plot(t,x,'tab:blue',label='Sin tendencia')
+pt.plot(t,y,'tab:orange',label='Tendencia')
 pt.legend(prop={'size':10}, loc='upper left')
 pt.show()'''
     st.code(codigo, language='python')
@@ -32,6 +36,6 @@ cambio=['Ocultar Resultados', 'Mostrar Resultados']
 MostrarReusltado = st.radio ('Resultado',cambio)
 if MostrarReusltado == 'Mostrar Resultados':
     
-    imagenRes= Image.open('test/Preg5.png')
+    imagenRes= Image.open('Preg5.png')
     st.image(imagenRes, caption='Resultado')
     st.write("##")
