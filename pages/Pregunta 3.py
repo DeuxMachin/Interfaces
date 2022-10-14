@@ -17,6 +17,7 @@ if page == 'Mostrar Codigo':
 from matplotlib.pyplot import figure
 import numpy as np
 from numpy.lib.polynomial import polyval
+from matplotlib import pyplot as pt
 from pylab import *
 #Cargamos con numpy los archivos npy
 recorrido = np.load("f1.npy")
@@ -29,6 +30,8 @@ z= np.polyfit(x,recorrido,1)
 z2=np.polyfit(x,recorrido2,2)
 
 figure()
+pt.xlabel('Recorrido')
+pt.ylabel('DEG')
 plot(x,recorrido,'oy')
 plot(x,recorrido2,'o')
 plot(x,polyval(z,x),'-')
