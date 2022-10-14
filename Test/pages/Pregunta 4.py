@@ -5,7 +5,7 @@ from PIL import Image
 st.title('Pregunta 4')
 st.write("Dada la señal signal.npy aplique los filtros Median y Wiener para obtener el siguiente gráfico. Investigue sobre el módulos scipy.signal.")
 
-imagen= Image.open('Pregu4.png')
+imagen= Image.open('test/Pregu4.png')
 st.image(imagen, caption='Imagen Cuarta problematica')
 st.write("##")
 
@@ -41,6 +41,6 @@ cambio=['Ocultar Resultados', 'Mostrar Resultados']
 MostrarReusltado = st.radio ('Resultado',cambio)
 if MostrarReusltado == 'Mostrar Resultados':
     
-    imagenRes= Image.open('Preg4.png')
+    imagenRes= Image.open('test/Preg4.png')
     st.image(imagenRes, caption='Resultado')
     st.write("##")

@@ -5,7 +5,7 @@ from PIL import Image
 st.title('Pregunta 5')
 st.write("Separe la tendencia de la señal. Obtenga un gráfico similar. Complete el código. ")
 
-imagen= Image.open('Pregu5.png')
+imagen= Image.open('test/Pregu5.png')
 st.image(imagen, caption='Imagenes Quinta problematica')
 st.write("##")
 
@@ -32,6 +32,6 @@ cambio=['Ocultar Resultados', 'Mostrar Resultados']
 MostrarReusltado = st.radio ('Resultado',cambio)
 if MostrarReusltado == 'Mostrar Resultados':
     
-    imagenRes= Image.open('Preg5.png')
+    imagenRes= Image.open('test/Preg5.png')
     st.image(imagenRes, caption='Resultado')
     st.write("##")

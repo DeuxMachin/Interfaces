@@ -5,7 +5,7 @@ from PIL import Image
 st.title('Pregunta 6')
 st.write(" Obtenga la Interpolación de Chebyshev desde cheby.npy. ¿Qué conclusiones obtiene? ¿Escriba el polinomio con sus coeficientes? ")
 
-imagen= Image.open('Pregu6.png')
+imagen= Image.open('test/Pregu6.png')
 st.image(imagen, caption='Imagenes Sexta problematica')
 st.write("##")
 
@@ -43,6 +43,6 @@ cambio=['Ocultar Resultados', 'Mostrar Resultados']
 MostrarReusltado = st.radio ('Resultado',cambio)
 if MostrarReusltado == 'Mostrar Resultados':
     
-    imagenRes= Image.open('Preg6.png')
+    imagenRes= Image.open('test/Preg6.png')
     st.image(imagenRes, caption='Resultado')
     st.write("##")

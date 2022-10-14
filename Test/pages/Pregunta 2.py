@@ -5,10 +5,10 @@ from PIL import Image
 st.title('Pregunta 2')
 st.write("Coloque cada una las siguientes imágenes en la posición señalada dentro de la plantilla de salida. Debe redimensionar y rotar las figuras. Programe un script en Python + Pygame + PIL")
 
-imagen= Image.open('Imagen.png')
+imagen= Image.open('test/Imagen.png')
 st.image(imagen, caption='Imagen de Segunda problematica')
 st.write("##")
-imagen2=Image.open('plantilla.png')
+imagen2=Image.open('test/plantilla.png')
 st.image(imagen2, caption='Donde colocar imagenes')
 
 
@@ -64,6 +64,6 @@ cambio=['Ocultar Resultados', 'Mostrar Resultados']
 MostrarReusltado = st.radio ('Resultado',cambio)
 if MostrarReusltado == 'Mostrar Resultados':
     
-    imagenRes= Image.open('Resultado2.png')
+    imagenRes= Image.open('test/Resultado2.png')
     st.image(imagenRes, caption='Resultado')
     st.write("##")
